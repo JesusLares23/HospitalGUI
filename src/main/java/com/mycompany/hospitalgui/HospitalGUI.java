@@ -7,7 +7,7 @@ import Persistencia.*;
 
 /**
  *
- * @author Jesús Pedro Lares Velncia (00000233383) y
+ * @author Jesús Pedro Lares Velncia (00000233383) y Marcos Alejandro Nuñez Rios(00000248414)
  */
 public class HospitalGUI {
 
