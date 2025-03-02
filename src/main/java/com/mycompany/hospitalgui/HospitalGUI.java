@@ -3,6 +3,7 @@ package com.mycompany.hospitalgui;
 
 import Menu.MenuPrincipal;
 import Persistencia.*;
+import guis.frmVentanaPrincipal;
 
 
 /**
@@ -14,6 +15,9 @@ public class HospitalGUI {
     public static void main(String[] args) {
         IPersistenciaFachada persistencia = new PersistenciaFachada();
         MenuPrincipal menu = new MenuPrincipal(persistencia);
+        
+        new frmVentanaPrincipal();
+        
         menu.mostrar();
     }
 }
