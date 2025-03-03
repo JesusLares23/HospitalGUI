@@ -12,4 +12,12 @@
         <exec.mainClass>com.mycompany.hospitalgui.HospitalGUI</exec.mainClass>
     </properties>
     <name>HospitalGUI</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE90</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 </project>

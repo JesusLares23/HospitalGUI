@@ -2,6 +2,8 @@ package guis;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -14,9 +16,9 @@ import javax.swing.JMenuItem;
  */
 public class frmVentanaPrincipal extends JFrame {
 
-    JMenuBar mnbPrincipal;
-    JMenu mnuOperaciones, mnuConsultas;
-    JMenuItem mniOperacionesPacientes, mniOperacionesMedicos, 
+    private JMenuBar mnbPrincipal;
+    private JMenu mnuOperaciones, mnuConsultas;
+    private JMenuItem mniOperacionesPacientes, mniOperacionesMedicos, 
             mniOperacionesInventario, mniOperacionesConsultas, 
             mniConsultaPacientes, mniConsultaMedicos, 
             mniConsultaInventario, mniConsultaConsultas;
@@ -55,6 +57,8 @@ public class frmVentanaPrincipal extends JFrame {
         mnbPrincipal.add(mnuConsultas);
         
         mniOperacionesPacientes.setText("Pacientes");
+        mniOperacionesPacientes.addActionListener(
+                new abrirOpsPacientesListener());
         mnuOperaciones.add(mniOperacionesPacientes);
         
         mniOperacionesMedicos.setText("Medicos");
@@ -78,6 +82,13 @@ public class frmVentanaPrincipal extends JFrame {
         mniConsultaConsultas.setText("Consultas");
         mnuConsultas.add(mniConsultaConsultas);
         
+    }
+    
+    class abrirOpsPacientesListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new frmOperacionesPacientes();
+        }
     }
 
     public void centrarVentana() {
